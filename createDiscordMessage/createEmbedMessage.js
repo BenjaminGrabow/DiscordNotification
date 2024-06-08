@@ -22,17 +22,17 @@ const createEmbedMessage = (eventData) => {
             url: eventData.projectLogo,
           },
           fields: [
-            { name: '***Ask Price***', value: `${eventData.askPrice.toString()}$`, inline: true },
-            { name: '***Amount***', value: `${eventData.amount.toString()}$`, inline: true },
+            { name: '***Ask Price***', value: `${eventData.askPrice}$`, inline: true },
+            { name: '***Amount***', value: `${eventData.amount}$`, inline: true },
             { name: '***Date***', value: `<t:${eventData.timestamp}:R>\u200B\n`, inline: true },
             {
               name: '***Multiplier***',
               value:
                 eventData.multiplier > 1
-                  ? createEmojiMessage(`${eventData.multiplier.toString()}x`, greenEmoji)
+                  ? createEmojiMessage(`${eventData.multiplier}x`, greenEmoji)
                   : eventData.multiplier < 1
-                  ? createEmojiMessage(`${eventData.multiplier.toString()}x`, redEmoji)
-                  : `${eventData.multiplier.toString()}x`,
+                  ? createEmojiMessage(`${eventData.multiplier}x`, redEmoji)
+                  : `${eventData.multiplier}x`,
               inline: true,
             },
             { name: '***State***', value: eventData.state, inline: true },
