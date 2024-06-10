@@ -22,11 +22,11 @@ const createEmbedMessage = (eventData) => {
             url: eventData.projectLogo,
           },
           fields: [
-            { name: '***Ask Price***', value: `${eventData.askPrice}$`, inline: true },
-            { name: '***Amount***', value: `${eventData.amount}$`, inline: true },
-            { name: '***Date***', value: `<t:${eventData.timestamp}:R>\u200B\n`, inline: true },
+            { name: '__**Ask Price**__', value: `${eventData.askPrice}$`, inline: true },
+            { name: '__**Amount**__', value: `${eventData.amount}$`, inline: true },
+            { name: '__**Date**__', value: `<t:${eventData.timestamp}:R>\u200B\n`, inline: true },
             {
-              name: '***Multiplier***',
+              name: '__**Multiplier**__',
               value:
                 eventData.multiplier > 1
                   ? createEmojiMessage(`${eventData.multiplier}x`, greenEmoji)
@@ -35,14 +35,14 @@ const createEmbedMessage = (eventData) => {
                   : `${eventData.multiplier}x`,
               inline: true,
             },
-            { name: '***State***', value: eventData.state, inline: true },
+            { name: '__**State**__', value: eventData.state, inline: true },
             {
-              name: '***Type***',
+              name: '__**Type**__',
               value: eventData.type,
               inline: true,
             },
             {
-              name: 'Links',
+              name: '__**Links**__',
               value: `[OTC channel](${eventData.otcChannelLink})`,
             },
           ],
